@@ -19,4 +19,10 @@ Route::get('/', function () {
 
 Route::get('/muestraProductos', 'ProductoController@muestraProducto');
 
-Route::get('/datos', 'ProductoController@agregaProducto');
+Route::get('/agregaProductos', 'ProductoController@agregaProducto');
+
+Route::post('/envio', 'ProductoController@create');
+
+Route::get('/editar/{id}', 'ProductoController@edit');
+
+Route::post('/editar/guardaEdicion', 'ProductoController@guardaEdicion');

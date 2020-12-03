@@ -25,22 +25,22 @@ class ProductoController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    
+    public function create(Request $request)
     {
-        //
+
+        $Producto = Producto::all();
+        $nuevoProducto = new Producto;
+        $nuevoProducto->Nombre = $request->Nombre;
+        $nuevoProducto->Descripcion = $request->Descripcion;
+        $nuevoProducto->NumeroProductos = $request->NumeroProductos;
+        $nuevoProducto->Precio = $request->Precio;
+        $nuevoProducto->save();
+
+        return  redirect('/muestraProductos');
+    
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         //
@@ -65,7 +65,22 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $nuevoProducto = Producto::find($id);
+        return view('edicionProducto')->with('Producto',$nuevoProducto);
+    }
+
+    public function guardaEdicion(Request $request)
+    {
+        $nuevoProducto = Producto::find($request->id);
+        if(!is_null($nuevoProducto))
+        {
+            $nuevoProducto->Nombre = $request->Nombre;
+            $nuevoProducto->Descripcion = $request->Descripcion;
+            $nuevoProducto->NumeroProductos = $request->NumeroProductos;
+            $nuevoProducto->Precio = $request->Precio;
+            $nuevoProducto->save();
+        }
+        return redirect('/muestraProductos');
     }
 
     /**
