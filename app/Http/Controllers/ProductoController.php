@@ -3,9 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Producto;
 
 class ProductoController extends Controller
 {
+    public function agregaProducto()
+    {
+        $Producto = Producto::all();
+        return view('CreacionProducto')->with('Producto',$Producto);
+    }
+
+
+    public function muestraProducto()
+    {
+        $Producto = Producto::all();
+        return view('muestraProductos')->with('Producto',$Producto);
+        
+    }
     public function index()
     {
         //
