@@ -13,6 +13,7 @@
         @csrf
         <input type="hidden" name="id" value="{{$Producto->id}}">
         <h4> Formulario de Productos </h4>
+        Producto - {{$Producto->Nombre}}
         <h2>Nombre del Producto:</h2>
         <input class="controls" type="text" name="Nombre" value="{{$Producto->Nombre}}"/><br>
         <h2>Descripcion:</h2>

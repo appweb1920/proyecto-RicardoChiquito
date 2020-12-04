@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link type="text/css" href="app.css?<?php echo date('Y-m-d H:i:s'); ?>" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="stylePagina.css">
@@ -21,10 +22,11 @@
         <input class="controls2"  type="text" name="NumeroProductos" placeholder="Numero de Productos"/><br>
         <h2>Costo:</h2>
         <input class="controls2"  type="text" name="Precio" placeholder="Costo del Producto"/><br>
-        <button class="buttons" type="submit" class="btn btn-secondary">Enviar</button><br>
-
+        <button class="buttons" type="submit">Enviar</button><br>
+        <br>
+        
         <a href="{{url('/muestraProductos')}}">
-            <button type="button" class="buttons" >Regresar</button>
+            <button type="button" class="buttons2" >Regresar</button>
         </a>
     </form>    
 

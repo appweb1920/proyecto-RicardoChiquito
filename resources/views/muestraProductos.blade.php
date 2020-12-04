@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link type="text/css" href="app.css?<?php echo date('Y-m-d H:i:s'); ?>" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -23,7 +24,7 @@
 
     <header class="header">
         <div class="wrapper">
-           <a href="pagina1.php"> <img class="logo" src="Gamers.jpg" alt="logo" width="350" height="200" ALIGN="left"></a>
+           <a href='/agregaProductos'> <img class="logo" src="" alt="logo" width="50" height="50" ALIGN="left"></a>
         </div>
     </header>
 
@@ -37,8 +38,8 @@
                     <th>Descripcion</th>
                     <th>Numero de Productos</th>
                     <th>Precio</th>
-                    <th>Edicion de Productos</th>
-                    <th>Eliminacion</th>
+                    <th>Editar Producto</th>
+                    <th>Quitar Producto</th>
                 </tr>  
             </thead>
             <tbody>
@@ -54,12 +55,13 @@
                 </tr> 
                 @endforeach
             </tbody>
+           
         </table>
         <a href="{{url('/agregaProductos')}}">
-        <button type="button" class="buttons" >Agregar Producto</button>
-    </a>
+            <button type="button" class="buttons3" >Agregar Producto</button>
+        </a>
     </nav>
        
-  
+    
 </body>
 </html>
