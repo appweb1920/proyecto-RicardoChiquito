@@ -15,8 +15,7 @@
     color: black;
     top: 50%;
     left: 35%;
-    text-align: center;
-    
+    text-align: center;  
 }
 
 .form-register h4{
@@ -113,4 +112,18 @@
     border: 1px solid #1f53c5;
     font-family: 'calibri';
     font-size: 18px;
+}
+
+.form-register3{
+    width: 200px;
+    background-color: #ee8b67;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: black;
+    top: 50%;
+    left: 35%;
+    text-align: center;  
 }
