@@ -7,27 +7,29 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link type="text/css" href="app.css?<?php echo date('Y-m-d H:i:s'); ?>" rel="stylesheet" />
+    
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
+                background-color: #F5BCA9;
+                color: black;
                 font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
+                font-weight: 10px;
+                height: 100px;
                 margin: 0;
             }
 
             .full-height {
-                height: 100vh;
+                height: 60px;
             }
 
             .flex-center {
                 align-items: center;
                 display: flex;
                 justify-content: center;
+                background-color: #A9F5F2;
             }
 
             .position-ref {
@@ -41,15 +43,18 @@
             }
 
             .content {
+                align-items: center;
                 text-align: center;
+                margin:100px;
             }
 
             .title {
+                justify-content: center;
                 font-size: 84px;
             }
 
             .links > a {
-                color: #636b6f;
+                color: red;
                 padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
@@ -78,23 +83,18 @@
                     @endauth
                 </div>
             @endif
-
+        </div>
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    NOVEDADES SANDY
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <H2>PEQUEÑA TIENDA DE
+                     REGALOS PARA TODAS LAS OCASIONES</H2>
+                     <a href="{{url('/muestraProductos')}}">Clic aqui para ver Productos</a>
                 </div>
             </div>
-        </div>
+        
     </body>
 </html>

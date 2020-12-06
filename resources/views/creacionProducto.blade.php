@@ -11,7 +11,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form class="form-register" action="/envio" method="POST" enctype="multipart/form-data">
+    <form class="form-register2" action="/envio" method="POST" enctype="multipart/form-data">
         @csrf
         <h4> Formulario de Producto </h4>
         <h2>Nombre del Producto:</h2>

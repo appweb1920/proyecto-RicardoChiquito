@@ -24,7 +24,7 @@
 
     <header class="header">
         <div class="wrapper">
-           <a href='/agregaProductos'> <img class="logo" src="" alt="logo" width="50" height="50" ALIGN="left"></a>
+           <a href='/agregaProductos'> <img class="logo" src="{{ asset('/images/cocalogo.png') }}" alt="logo" width="50" height="50" ALIGN="left"></a>
         </div>
     </header>
 
