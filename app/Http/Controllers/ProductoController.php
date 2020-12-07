@@ -38,7 +38,7 @@ class ProductoController extends Controller
         $nuevoProducto->Precio = $request->Precio;
         $nuevoProducto->save();
 
-        return  redirect('/muestraProductos');
+        return  redirect('/home');
     
     }
 

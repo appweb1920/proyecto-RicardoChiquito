@@ -26,8 +26,11 @@
                     <th>Descripcion</th>
                     <th>Numero de Productos</th>
                     <th>Precio</th>
+                    @if(Auth::user()->tipo != '1')
+                    @else
                     <th>Editar Producto</th>
                     <th>Quitar Producto</th>
+                    @endif
                 </tr>  
             </thead>
             <tbody>
@@ -38,16 +41,25 @@
                     <td>{{$Producto->Descripcion}}</td>
                     <td>{{$Producto->NumeroProductos}}</td>
                     <td>{{$Producto->Precio}}</td> 
+                    @if(Auth::user()->tipo != '1')
+                    @else
                     <td><a href="/editar/{{$Producto->id}}">Editar</a></td>
                     <td><a href="/borrar/{{$Producto->id}}">Eliminar</a></td>
+                    @endif
                 </tr> 
                 @endforeach
             </tbody>
            
         </table>
+
+        @if(Auth::user()->tipo != '1')
+            
+        @else
         <a href="{{url('/agregaProductos')}}">
             <button type="button" class="buttons3" >Agregar Producto</button>
         </a>
+        @endif
+        
     </nav>
        
         </div>
