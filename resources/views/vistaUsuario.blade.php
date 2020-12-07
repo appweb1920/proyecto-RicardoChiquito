@@ -21,7 +21,7 @@
     @section('content')
 </head>
 <body>
-
+    
 </body>
 @endsection
 </html>

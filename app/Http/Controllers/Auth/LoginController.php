@@ -10,8 +10,6 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    
-
     use AuthenticatesUsers;
 
     
@@ -24,7 +22,6 @@ class LoginController extends Controller
 
     public function redirectTo(Type $var = null)
     {
-        
         $user=Auth::user();
         //dd($user);
         if(is_null($user->tipo))

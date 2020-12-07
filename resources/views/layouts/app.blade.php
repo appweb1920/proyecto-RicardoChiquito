@@ -23,9 +23,12 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                   !--Imagen
+                <a class="navbar-brand" Align=center href="{{ url('/') }}">
+               
                 </a>
+                <div Align=center>
+                <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
+                </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>

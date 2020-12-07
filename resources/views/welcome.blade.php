@@ -66,6 +66,7 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
         </style>
     </head>
 
@@ -95,6 +96,16 @@
                     <H2>PEQUEÑA TIENDA DE
                      REGALOS PARA TODAS LAS OCASIONES</H2>
                      <a href="{{url('/vistaUsuario')}}">Clic aqui para ver Productos</a>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div>
+                    <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
+                    <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
+                    <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
+                    <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
                 </div>
             </div>
         
