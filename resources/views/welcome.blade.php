@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Regalos Sandy</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link type="text/css" href="app.css?<?php echo date('Y-m-d H:i:s'); ?>" rel="stylesheet" />
-    
+
         <!-- Styles -->
         <style>
             html, body {
@@ -55,8 +55,8 @@
 
             .links > a {
                 color: red;
-                padding: 0 25px;
-                font-size: 13px;
+                padding: 25px;
+                font-size: 18px;
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
