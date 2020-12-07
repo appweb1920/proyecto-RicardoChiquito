@@ -28,6 +28,11 @@ Route::get('/editar/{id}', 'ProductoController@edit');
 Route::post('/editar/guardaEdicion', 'ProductoController@guardaEdicion');
 
 Route::get('/borrar/{id}', 'ProductoController@destroy');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/home', 'ProductoController@muestraProducto');
+
+Route::get('/vistaUsuario', 'ProductoController@index');

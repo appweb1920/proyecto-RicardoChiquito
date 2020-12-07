@@ -17,12 +17,13 @@ class ProductoController extends Controller
     public function muestraProducto()
     {
         $Producto = Producto::all();
-        return view('muestraProductos')->with('Producto',$Producto);
+        return view('home')->with('Producto',$Producto);
         
     }
     public function index()
     {
-        //
+        $Producto = Producto::all();
+        return view('vistaUsuario')->with('Producto',$Producto);
     }
 
     

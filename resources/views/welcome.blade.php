@@ -92,7 +92,7 @@
                 <div class="links">
                     <H2>PEQUEÑA TIENDA DE
                      REGALOS PARA TODAS LAS OCASIONES</H2>
-                     <a href="{{url('/muestraProductos')}}">Clic aqui para ver Productos</a>
+                     <a href="{{url('/vistaUsuario')}}">Clic aqui para ver Productos</a>
                 </div>
             </div>
         

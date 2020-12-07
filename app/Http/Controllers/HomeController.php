@@ -25,4 +25,11 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    public function muestraProducto()
+    {
+        $Producto = Producto::all();
+        return view('home')->with('Producto',$Producto);
+        
+    }
 }

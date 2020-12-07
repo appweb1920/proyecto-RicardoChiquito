@@ -25,7 +25,7 @@
         <button class="buttons" type="submit">Enviar</button><br>
         <br>
         
-        <a href="{{url('/muestraProductos')}}">
+        <a href="{{url('/home')}}">
             <button type="button" class="buttons2" >Regresar</button>
         </a>
     </form>    

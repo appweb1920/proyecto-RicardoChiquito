@@ -16,19 +16,40 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+        <nav  class="form-register2">
+    <h2>Listado de Productos</h2><br>
+        <table class="table" >
+            <thead class="thead-dark">
+                <tr>
+                    <th>id</th>
+                    <th>Nombre</th>
+                    <th>Descripcion</th>
+                    <th>Numero de Productos</th>
+                    <th>Precio</th>
+                    <th>Editar Producto</th>
+                    <th>Quitar Producto</th>
+                </tr>  
+            </thead>
+            <tbody>
+                @foreach($Producto as $Producto)
+                <tr>
+                    <td>{{$Producto->id}}</td>
+                    <td>{{$Producto->Nombre}}</td>
+                    <td>{{$Producto->Descripcion}}</td>
+                    <td>{{$Producto->NumeroProductos}}</td>
+                    <td>{{$Producto->Precio}}</td> 
+                    <td><a href="/editar/{{$Producto->id}}">Editar</a></td>
+                    <td><a href="/borrar/{{$Producto->id}}">Eliminar</a></td>
+                </tr> 
+                @endforeach
+            </tbody>
+           
+        </table>
+        <a href="{{url('/agregaProductos')}}">
+            <button type="button" class="buttons3" >Agregar Producto</button>
+        </a>
+    </nav>
+       
         </div>
     </div>
 </div>
