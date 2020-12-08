@@ -19,6 +19,7 @@ class Producto extends Migration
             $table->string('Descripcion');
             $table->string('NumeroProductos');
             $table->string('Precio');
+            $table->string('Foto');
             $table->softDeletes();
             $table->timestamps();
         });

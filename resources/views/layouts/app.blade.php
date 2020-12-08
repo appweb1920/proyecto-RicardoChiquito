@@ -18,6 +18,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+    .collapse navbar-collapse h2{
+        color: red;
+
+    }
+    </style>
 </head>
 <body>
     <div id="app">
@@ -27,7 +33,7 @@
                
                 </a>
                 <div Align=center>
-                <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
+                <img src="{{ asset('images/logonice2.jpg') }}" width="180" height="100">
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -38,7 +44,7 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
-
+                    <div><h2>NOVEDADES SANDY</h2></div>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->

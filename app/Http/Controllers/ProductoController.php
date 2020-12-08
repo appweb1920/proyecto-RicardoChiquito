@@ -36,10 +36,33 @@ class ProductoController extends Controller
         $nuevoProducto->Descripcion = $request->Descripcion;
         $nuevoProducto->NumeroProductos = $request->NumeroProductos;
         $nuevoProducto->Precio = $request->Precio;
+        $nuevoProducto->foto="";
+        $nuevoProducto->save();
+        $archivo=$request->file('arch');
+        $path= $request->file('arch')->storeAs(
+            'public/images', $nuevoProducto->id.".".$archivo->getClientOriginalExtension()
+        );
+        //dd($path);
+        $nuevoProducto->foto= $nuevoProducto->id.".".$archivo->getClientOriginalExtension();
         $nuevoProducto->save();
 
         return  redirect('/home');
     
+    }
+
+    public function pruebaArchivo(Type $var = null)
+    {
+        return view('creacionProducto');
+    }
+
+    public function guardaArchivo(Request $request)
+    {
+        $archivo=$request->file('arch');
+        $path= $request->file('arch')->storeAs(
+            'public/images', $nuevoProducto->id.".".$archivo->getClientOriginalExtension()
+        );
+        $nuevoProducto->foto= $nuevoProducto->id.".".$archivo->getClientOriginalExtension();
+        
     }
 
     public function store(Request $request)
@@ -73,15 +96,20 @@ class ProductoController extends Controller
     public function guardaEdicion(Request $request)
     {
         $nuevoProducto = Producto::find($request->id);
-        if(!is_null($nuevoProducto))
+        $nuevoProducto->Nombre = $request->Nombre;
+        $nuevoProducto->Descripcion = $request->Descripcion;
+        $nuevoProducto->NumeroProductos = $request->NumeroProductos;
+        $nuevoProducto->Precio = $request->Precio;
+        
+        if(!is_null($request->file('arch')))
         {
-            $nuevoProducto->Nombre = $request->Nombre;
-            $nuevoProducto->Descripcion = $request->Descripcion;
-            $nuevoProducto->NumeroProductos = $request->NumeroProductos;
-            $nuevoProducto->Precio = $request->Precio;
-            $nuevoProducto->save();
-        }
-        return redirect('/muestraProductos');
+            $archivo=$request->file('arch');
+            $path= $request->file('arch')->storeAs('public/images',$nuevoProducto->id.".".$archivo->getClientOriginalExtension());
+            $nuevoProducto->foto=$nuevoProducto->id.".".$archivo->getClientOriginalExtension();
+        }        
+        $nuevoProducto->save();
+        
+        return redirect('/home');
     }
 
     /**
@@ -106,6 +134,6 @@ class ProductoController extends Controller
     {
         $Producto = Producto::find($id);
         $Producto->delete();
-        return redirect('muestraProductos');
+        return redirect('home');
     }
 }

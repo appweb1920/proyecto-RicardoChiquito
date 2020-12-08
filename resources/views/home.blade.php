@@ -22,6 +22,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th>id</th>
+                    <th>Imagen</th>
                     <th>Nombre</th>
                     <th>Descripcion</th>
                     <th>Numero de Productos</th>
@@ -37,6 +38,7 @@
                 @foreach($Producto as $Producto)
                 <tr>
                     <td>{{$Producto->id}}</td>
+                    <td><img src="{{ asset('/images/'.$Producto->Foto) }}"></td>
                     <td>{{$Producto->Nombre}}</td>
                     <td>{{$Producto->Descripcion}}</td>
                     <td>{{$Producto->NumeroProductos}}</td>

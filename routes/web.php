@@ -31,6 +31,10 @@ Route::get('/borrar/{id}', 'ProductoController@destroy');
 
 Auth::routes();
 
+Route::get('/archivo', 'ProductoController@pruebaArchivo');
+
+Route::post('/guardaArchivo', 'ProductoController@guardaArchivo');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/home', 'ProductoController@muestraProducto');

@@ -33,6 +33,9 @@
         <input type="hidden" name="id" value="{{$Producto->id}}">
         <h4> Formulario de Productos </h4>
         Producto - {{$Producto->Nombre}}
+        <img src="{{ asset('/storage/images/'.$Producto->Foto) }}">
+        <h2>Imagen del Producto:</h2>
+        <input type="file"class="controls2" name="arch" id="arch" accept="image/png, image/jpeg">
         <h2>Nombre del Producto:</h2>
         <input class="controls2" type="text" name="Nombre" value="{{$Producto->Nombre}}"/><br>
         <h2>Descripcion:</h2>
@@ -43,7 +46,7 @@
         <input class="controls2"  type="text" name="Precio" value="{{$Producto->Precio}}"/><br><br>
         <button class="buttons" type="submit" >Enviar</button><br><br>
 
-        <a href="{{url('/muestraProductos')}}">
+        <a href="{{url('/home')}}">
             <button type="button" class="buttons" >Regresar</button>
         </a>
     </form> 
