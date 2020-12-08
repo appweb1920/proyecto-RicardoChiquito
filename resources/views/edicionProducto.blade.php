@@ -28,12 +28,16 @@
 @section('content')
 <body>
     
-    <form class="form-register3" action="guardaEdicion" method="POST" enctype="multipart/form-data">
+    <form class="form-register2" action="guardaEdicion" method="POST" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="id" value="{{$Producto->id}}">
         <h4> Formulario de Productos </h4>
-        Producto - {{$Producto->Nombre}}
-        <img src="{{ asset('/storage/images/'.$Producto->Foto) }}">
+        <h2>Producto - {{$Producto->Nombre}}</h2> <br>
+        <br>
+        <img src="{{ asset('/storage/images/'.$Producto->Foto) }}"  width="180" height="100">
+        <br>
+        <br>
+        
         <h2>Imagen del Producto:</h2>
         <input type="file"class="controls2" name="arch" id="arch" accept="image/png, image/jpeg">
         <h2>Nombre del Producto:</h2>
@@ -47,7 +51,7 @@
         <button class="buttons" type="submit" >Enviar</button><br><br>
 
         <a href="{{url('/home')}}">
-            <button type="button" class="buttons" >Regresar</button>
+            <button type="button" class="buttons2" >Regresar</button>
         </a>
     </form> 
 </body>
