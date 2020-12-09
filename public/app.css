@@ -90,7 +90,7 @@
 
 .form-register2{
     width: 90%;
-    background-color: #81F79F;
+    background-color: salmon;
     padding: 40px;
     margin: auto;
     margin-top: 10px;
@@ -178,5 +178,11 @@ html, body {
 }
 
 .m-b-md {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+}
+
+.btn-primary-spacing 
+{
+margin-right: 20px;
+margin-bottom: 0 !important;
 }
