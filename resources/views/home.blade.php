@@ -2,6 +2,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<title>Regalos Sandy</title>
 <style>
     html, body {
         background-color: #848484;
@@ -62,8 +63,8 @@
                         <td>{{$Producto->Precio}}</td> 
                         @if(Auth::user()->tipo != '1')
                         @else
-                        <td><a href="/editar/{{$Producto->id}}"><button type="button" class="btn btn-primary  btn btn-light" >Editar</button></a></td>
-                        <td><a href="/borrar/{{$Producto->id}}"><button type="button" class="btn btn-primary  btn btn-light" >Eliminar</button></a></td>
+                        <td><a href="/editar/{{$Producto->id}}"><img src="{{ asset('/images/edit.ico')}}" width="50" height="50"></a></td>
+                        <td><a href="/borrar/{{$Producto->id}}"><img src="{{ asset('/images/trash.ico')}}" width="50" height="50"></a></td>
                         @endif
                     </tr> 
                      @endforeach
