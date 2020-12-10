@@ -42,7 +42,7 @@
     width: 250px;
     border:3px solid #cccccc;
     height: 250px;
-    float: left;
+   
 }
 
 .cuadros:hover
@@ -54,7 +54,7 @@
 
 .elementos
 {
-    margin: 30px 0px 0px 5px;
+    margin: 30px 0px 0px 30px;
     
 }
 
@@ -107,7 +107,7 @@
     border-radius: 3px;
     text-decoration: none;
     display: block;
-    margin: 25px 0px 0px 25px;
+    margin: 25px 0px 0px 0px;
     padding-left: 15px;
     position: absolute;
     transition: top 1.2s;
@@ -127,7 +127,7 @@
     border-radius: 3px;
     display: block;
     text-decoration: line-through;
-    margin: 50px 0px 0px 100px;
+    margin: 50px 0px 0px 70px;
     padding-left: 5px;
     position: absolute;
 }
@@ -310,52 +310,31 @@
 </head>
 <body >
 <header class="title"><b>PRODUCTOS</b></header>
-    <div class="contenedor">
-        @foreach($Producto as $Producto)
-        <div class="cuadros">
-            <div class="elementos">
-                <td><img src="{{ asset('/storage/images/'.$Producto->Foto) }}"  width="180" height="100"></td>
-                <a class="titulo" href="#"><td>{{$Producto->Nombre}}</td></a>
-                <div>
-                    <div style ="float: left;"><a class="precioN"><td>{{$Producto->Precio}}</td></a></div>
-                </div>
+<div class="row">
+    @foreach($Producto as $Producto)
+        <div class="col-8 col-md-4">
+            <div class="cuadros">
+                <div class="elementos">
+                    
+                    <td><img src="{{ asset('/storage/images/'.$Producto->Foto) }}"  width="180" height="100"></td>
+                    <a class="titulo" href="#"><td>{{$Producto->Nombre}}</td></a>
+                    <div>
+                        <div style ="float: left;"><a class="precioN"><td>{{$Producto->Precio}}</td></a></div>
+                    </div>
+                </div> 
             </div>
         </div>
-        @endforeach   
-    </div>
-    <header class="title"><b>PORTFOLIO</b></header>
-    <div class="cont">
-        <div class="caja">
-            <img src="p1.jpg" alt="">
-            <div class="capa"></div>
-            <a class="enlace" href="#"><i class="fas fa-search-plus"></i></a>
-            <p class="texto" href="#"><b>Sunshine restaurant</b></p>
-            <p class="texto2" href="#"><b>Decor</b></p>
-        </div>       
-        <div class="caja">
-            <img src="p2.jpg" alt="">
-            <div class="capa"></div>
-            <a class="enlace" href="#"><i class="fas fa-search-plus"></i></a>
-            <p class="texto" href="#"><b>New york public library</b></p>
-            <p class="texto2" href="#"><b>Decor</b></p>
-        </div> 
-        <div class="caja">
-            <img src="p2.jpg" alt="">
-            <div class="capa"></div>
-            <a class="enlace" href="#"><i class="fas fa-search-plus"></i></a>
-            <p class="texto" href="#"><b>New york public library</b></p>
-            <p class="texto2" href="#"><b>Decor</b></p>
-        </div> 
-        <div class="caja">
-            <img src="p1.jpg" alt="">
-            <div class="capa"></div>
-            <a class="enlace" href="#"><i class="fas fa-search-plus"></i></a>
-            <p class="texto" href="#"><b>Sunshine restaurant</b></p>
-            <p class="texto2" href="#"><b>Decor</b></p>
-        </div> 
-    </div>
+    @endforeach
     
-    
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="{{url('/')}}">
+   <button type="button" class="btn btn-primary  btn btn-dark" >Regresar</button>
+</a>
 </body>
 @endsection
 </html>

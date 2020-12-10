@@ -76,6 +76,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
+                        
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
@@ -102,10 +103,9 @@
                 <br>
                 <br>
                 <div>
-                    <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
-                    <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
-                    <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
-                    <img src="{{ asset('images/cocalogo.png') }}" width="150" height="100">
+                    <img src="{{ asset('/images/joya1.JPG') }}" width="300" height="200">
+                    <img src="{{ asset('/images/joya2.JPG') }}" width="300" height="200">
+                    <img src="{{ asset('/images/joya3.JPG') }}" width="300" height="200">
                 </div>
             </div>
         
