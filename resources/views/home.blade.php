@@ -44,6 +44,10 @@
                         <th>Nombre</th>
                         <th>Descripcion</th>
                         <th>Numero de Productos</th>
+                        @if(Auth::user()->tipo != '1')
+                        @else
+                        <th>Status de Producto</th>
+                        @endif
                         <th>Precio</th>
                         @if(Auth::user()->tipo != '1')
                         @else
@@ -60,6 +64,14 @@
                         <td>{{$Producto->Nombre}}</td>
                         <td>{{$Producto->Descripcion}}</td>
                         <td>{{$Producto->NumeroProductos}}</td>
+                        @if(Auth::user()->tipo != '1')
+                        @else
+                            @if($Producto->NumeroProductos <= 5)
+                            <td style="background-color:red"><p>Por Agotarse</p></td>
+                            @else
+                            <td style="background-color:green"><p>Disponible</p></td>
+                            @endif 
+                        @endif
                         <td>{{$Producto->Precio}}</td> 
                         @if(Auth::user()->tipo != '1')
                         @else

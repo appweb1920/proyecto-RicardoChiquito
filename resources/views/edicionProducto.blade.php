@@ -40,8 +40,7 @@
       <input class="controls2"  type="text" name="Descripcion" value="{{$Producto->Descripcion}}"/>
   </div>
   <div class="form-group">
-    <label for="inputAddress2">Numero de Productos</label>
-    <input class="controls2"  type="text" name="NumeroProductos" value="{{$Producto->NumeroProductos}}"/>
+  <input type="number" id="tentacles" name="NumeroProductos" value="{{$Producto->NumeroProductos}}" min="0" max="50">
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
