@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="stylePagina.css"!-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"!-->
     <title>Edicion de los Datos</title>
 </head>
@@ -23,36 +25,54 @@
     height: 100px;
     margin: 0;
     }
+
+    .form-register3{
+    width: 700px;
+    height:900px;
+    background-color: #ee8b67;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: black;
+    text-align:center;
+   }
+
+  .controls2{
+    width: 100%;
+    background-color: #F5F6CE;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+  }
 </style>
+
 @section('content')
-<form action="guardaEdicion" method="POST" enctype="multipart/form-data">
+<form class="form-register3" action="guardaEdicion" method="POST" enctype="multipart/form-data">
 @csrf
 <input type="hidden" name="id" value="{{$Producto->id}}">
-<img src="{{ asset('/storage/images/'.$Producto->Foto) }}"  width="180" height="100">
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Nombre del Producto</label>
+<img src="{{ asset('/storage/images/'.$Producto->Foto) }}"  width="180" height="100"><br><br>
+
+      <h4>Nombre del Producto</h4>
       <input class="controls2" type="text" name="Nombre" value="{{$Producto->Nombre}}"/>
-    </div>
-  </div>
-  <div class="form-group">
-  <label for="inputPassword4">Descripcion</label>
+  
+
+      <br><br><h4>Descripcion:</h4>
       <input class="controls2"  type="text" name="Descripcion" value="{{$Producto->Descripcion}}"/>
-  </div>
-  <div class="form-group">
-  <input type="number" id="tentacles" name="NumeroProductos" value="{{$Producto->NumeroProductos}}" min="0" max="50">
-  </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">Costo</label>
+      <h4>Numero de Productos:</h4>
+  <input type="number" class="controls2" id="tentacles" name="NumeroProductos" value="{{$Producto->NumeroProductos}}" min="0" max="50">
+  
+    
+  <h4>Precio:</h4>
       <input class="controls2"  type="text" name="Precio" value="{{$Producto->Precio}}"/>
-    </div>
+  <br><br><h4>Imagen:</h4>
+      <input type="file"class="controls2" name="arch" id="arch" accept="image/png, image/jpeg">
+ <br><br> <button type="submit" class="btn btn-primary btn btn-dark">Editar</button>
   </div>
-  <div class="form-group">
-    <label for="inputCity">Imagen</label>
-    <input type="file"class="controls2" name="arch" id="arch" accept="image/png, image/jpeg">
-  </div>
-  <button type="submit" class="btn btn-primary btn btn-dark">Editar</button>
 </form>
 @endsection
 </body>
