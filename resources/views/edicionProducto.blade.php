@@ -29,7 +29,7 @@
     .form-register3{
     width: 700px;
     height:900px;
-    background-color: #ee8b67;
+    background-color: #848484;
     padding: 30px;
     margin: auto;
     margin-top: 50px;

@@ -25,10 +25,13 @@ class LoginController extends Controller
     {
         $user=Auth::user();
         //dd($user);
-        if(is_null($user->tipo))
+        if($user->tipo == '0')
         {
             $redirectTo='/vistaUsuario';
-        }   
+        }
+        elseif(is_null($user->tipo)){
+            $redirectTo='/vistaUsuario';
+        } 
         else{
             $redirectTo='/home';
         } 

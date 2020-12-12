@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/muestraProductos', 'ProductoController@muestraProducto');
+//Route::get('/muestraProductos', 'ProductoController@muestraProducto');
 
 Route::get('/agregaProductos', 'ProductoController@agregaProducto');
 
